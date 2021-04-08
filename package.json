@@ -39,6 +39,7 @@
     "chromedriver": "^2.27.2",
     "copy-webpack-plugin": "^4.0.1",
     "cordova-android": "^9.0.0",
+    "cordova-plugin-splashscreen": "^6.0.0",
     "cross-spawn": "^5.0.1",
     "css-loader": "^0.28.0",
     "eslint": "^4.15.0",
@@ -91,6 +92,9 @@
   "cordova": {
     "platforms": [
       "android"
-    ]
+    ],
+    "plugins": {
+      "cordova-plugin-splashscreen": {}
+    }
   }
 }
