@@ -1,9 +1,9 @@
 # cordova-vue2
-
+```
 npm i -g vue @vue/cli cordova
-
+```
 ## Build Setup
-
+```
 npm install
 
 npm run build 
@@ -15,3 +15,4 @@ cordova run android
 *ios의 경우 
 cordova build ios
 cordova run ios
+```
