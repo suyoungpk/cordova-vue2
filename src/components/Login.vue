@@ -1,6 +1,7 @@
 <template>
   <section class="login">
      login {{id}}
+     <p> {{$t('greeting')}}</p>
      <button type="button" @click="goBack()">뒤로가기</button>
   </section>
 </template>

@@ -1,22 +1,24 @@
 {
   "name": "cordova-vue2",
   "version": "1.0.0",
+  "private": true,
   "description": "A Vue.js project",
   "author": "suyoung <tty1122@ezens.net>",
-  "private": true,
   "scripts": {
-    "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
-    "start": "npm run dev",
-    "unit": "jest --config test/unit/jest.conf.js --coverage",
-    "e2e": "node test/e2e/runner.js",
-    "test": "npm run unit && npm run e2e",
+    "build": "node build/build.js",
     "lint": "eslint --ext .js,.vue src test/unit test/e2e/specs",
-    "build": "node build/build.js"
+    "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
+    "e2e": "node test/e2e/runner.js",
+    "i18n:report": "vue-cli-service i18n:report --src \"./src/**/*.?(js|vue)\" --locales \"./src/locales/**/*.json\"",
+    "start": "npm run dev",
+    "test": "npm run unit && npm run e2e",
+    "unit": "jest --config test/unit/jest.conf.js --coverage"
   },
   "dependencies": {
     "axios": "^0.21.1",
     "cors": "^2.8.5",
     "vue": "^2.5.2",
+    "vue-i18n": "^8.24.3",
     "vue-router": "^3.0.1",
     "vuex": "^3.6.2"
   },
@@ -71,6 +73,7 @@
     "shelljs": "^0.7.6",
     "uglifyjs-webpack-plugin": "^1.1.1",
     "url-loader": "^0.5.8",
+    "vue-cli-plugin-i18n": "~2.1.0",
     "vue-jest": "^1.0.2",
     "vue-loader": "^13.3.0",
     "vue-style-loader": "^3.0.1",
@@ -79,10 +82,6 @@
     "webpack-bundle-analyzer": "^2.9.0",
     "webpack-dev-server": "^2.9.1",
     "webpack-merge": "^4.1.0"
-  },
-  "engines": {
-    "node": ">= 6.0.0",
-    "npm": ">= 3.0.0"
   },
   "browserslist": [
     "> 1%",
@@ -96,5 +95,9 @@
     "plugins": {
       "cordova-plugin-splashscreen": {}
     }
+  },
+  "engines": {
+    "node": ">= 6.0.0",
+    "npm": ">= 3.0.0"
   }
 }

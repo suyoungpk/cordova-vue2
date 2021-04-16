@@ -1,6 +1,12 @@
 <template>
   <!-- header -->
-  <header>header</header>
+  <header>
+    header
+     <select @change="onChange($event)">
+        <option value="ko">한국어</option>
+        <option value="en">English</option>
+     </select> 
+  </header>
   <!-- //header -->
 </template>
 
@@ -25,6 +31,9 @@ export default {
     // window.addEventListener("resize",this.setScreenMode) // 리사이징으로 모드 업데이트
   },
   methods: {
+    onChange:function(e){
+      this.$i18n.locale=e.target.value;
+    }
     // setScreenMode: function () {
     //   var w = window.innerWidth
     //   if (w > 1024) this.screenMode = 'pc'
